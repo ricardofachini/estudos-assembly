@@ -1,8 +1,14 @@
 bits 64
 
-section .text
-
 global assembly
 assembly:
-  mov eax, 777
+  mov eax, 0
+
+  mov rbx, 7
+  mov rcx, 5  
+  cmp rbx, rcx
+  jle .end
+
+  mov eax, 1
+.end:
   ret
